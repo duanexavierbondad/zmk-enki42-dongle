@@ -142,7 +142,7 @@
                 };
                 sys_layer {    //SYS
                 bindings = <
-  &none             &none              &none             &none            &none              &to DEF                  &to DEF          &none              &none           &none          &none        &none
+  &none             &none              &kp X             &kp A            &kp V              &to DEF                  &to DEF          &kp I              &kp E           &kp N          &none        &none
   &none             &none              &none             &none            &none              &bootloader              &bootloader      &none              &none           &none          &none        &none
   &none             &none              &none             &none            &none              &sys_reset               &sys_reset       &none              &none           &none          &none        &none
                                                          &trans           &trans             &trans                   &trans           &trans             &trans
