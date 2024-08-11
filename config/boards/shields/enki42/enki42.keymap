@@ -91,7 +91,7 @@
                 };
                 mouse_layer {   //MOUSE
                 bindings = <
-  &bootloader       &bootloader        &mkp LCLK       &kp ASTRK         &mkp LRCLK        &kp RBRC                   &none            &none              &none         &none            &none       &none
+  &bootloader       &bootloader        &none           &kp ASTRK         &none            &kp RBRC                   &none            &none              &none         &none            &none       &none
   &kp K_UNDO        &kp DOUBLE_QUOTES  &kp DLLR        &kp PRCNT         &kp CARET         &kp PLUS                   &caps_word       &kp LSHFT          &kp LCTRL     &kp LALT         &kp LGUI      &mt RALT F2
   &kp K_UNDO        &kp TILDE          &kp EXCL        &kp AT            &kp HASH          &kp PIPE                   &none            &none              &none         &none            &none       &none
                                                        &kp LPAR          &kp RPAR          &kp UNDER                  &trans           &trans             &trans
