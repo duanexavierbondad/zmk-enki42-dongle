@@ -22,9 +22,9 @@
 #define VALTWO 8
 #define SYS 9
 
-&lt { quick_tap_ms = <220>; };
-&lt { quick_tap_ms = <220>; };
-&mt { quick_tap_ms = <220>; };
+&lt { quick_tap_ms = <200>; };
+&lt { quick_tap_ms = <200>; };
+&mt { quick_tap_ms = <200>; };
 
 / {
     conditional_layers {
