@@ -11,6 +11,10 @@
 #include <dt-bindings/zmk/ext_power.h>
 #include "mouse.dtsi"
 
+
+#include <dt-bindings/zmk/bt.h>
+#define _BT_SEL_KEYS_ &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3
+
 #define DEF 0
 #define NUM 1
 #define NAV 2
@@ -142,9 +146,9 @@
                 };
                 sys_layer {    //SYS
                 bindings = <
-  &none             &none              &none             &none            &none              &to DEF                  &to DEF          &none              &none           &none          &none        &none
-  &none             &none              &none             &none            &none              &bootloader              &bootloader      &none              &none           &none          &none        &none
-  &none             &none              &none             &none            &none              &sys_reset               &sys_reset       &none              &none           &none          &none        &none
+  &none             &none              _BT_SEL_KEYS_     &none            &none              &to DEF                  &to DEF          &none              &none           &none          &none        &none
+  &none             &bt BT_CLR         &none             &none            &none              &bootloader              &bootloader      &none              &none           &none          &bt BT_CLR   &none
+  &none             &bt BT_SEL 0       &bt BT_SEL 1      &bt BT_SEL 2     &bt BT_SEL 3       &sys_reset               &sys_reset       &bt BT_SEL 0       &bt BT_SEL 1     bt BT_SEL 2   &bt BT_SEL 3 &none
                                                          &trans           &trans             &trans                   &trans           &trans             &trans
                         >; 
                 };
