@@ -29,46 +29,19 @@
 &lt { quick_tap_ms = <250>; };
 &lt { quick_tap_ms = <250>; };
 
-
-
-/* Global settings */
-
-#define QUICK_TAP_MS 175
-
-&sk {  // sticky-key config
-    release-after-ms = <900>;  // release after 0.6s
-    quick-release;             // no double capitalization when rolling keys
-};
-
-&sl {  // sticky-layer config
-    ignore-modifiers;          // allow chording sticky mods & layers
-};
-
-&lt {  // layer-tap config
-    flavor = "balanced";
-    tapping-term-ms = <200>;
-    quick-tap-ms = <QUICK_TAP_MS>;
-};
-
 /* Homerow mods */
 
-#define KEYS_L LT0 LT1 LT2 LT3 LT4 LM0 LM1 LM2 LM3 LM4 LB0 LB1 LB2 LB3 LB4  // left hand
-#define KEYS_R RT0 RT1 RT2 RT3 RT4 RM0 RM1 RM2 RM3 RM4 RB0 RB1 RB2 RB3 RB4  // right hand
-#define THUMBS LH2 LH1 LH0 RH0 RH1 RH2                                      // thumbs
-
-#define MAKE_HRM(NAME, HOLD, TAP, TRIGGER_POS) \
-    ZMK_HOLD_TAP(NAME, \
-        flavor = "balanced"; \
-        tapping-term-ms = <280>; \
-        quick-tap-ms = <QUICK_TAP_MS>; \
-        require-prior-idle-ms = <150>; \
-        bindings = <HOLD>, <TAP>; \
-        hold-trigger-key-positions = <TRIGGER_POS>; \
-        hold-trigger-on-release; \
-    )
-MAKE_HRM(hml, &kp, &kp, KEYS_R THUMBS)  // left-hand HRMs
-MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
-
+/ {
+    behaviors {
+        bhm: balanced_homerow_mods {
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;    // <---[[moderate duration]]
+            quick-tap-ms = <0>;
+            flavor = "balanced";
+            bindings = <&kp>, <&kp>;
+        };
+    };
 / {
     conditional_layers {
         compatible = "zmk,conditional-layers";
@@ -113,16 +86,16 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
 
                 default_layer {  //DEFAULT
                 bindings = <
-  &hml LWIN RBKT      &kp Q             &kp W          &kp F             &kp P             &kp B                     &kp J            &kp L             &kp U           &kp Y           &kp SEMI       &hmr RWIN LBKT 
-  &hml LCTRL GRAVE    &hml LGUI A        &hml LALT R     &hml LCTRL S       &hml LSHFT T       &kp G                     &kp M            &hmr RSHFT N       &hmr RCTRL E     &hmr RALT I      &hmr LGUI O     &hmr RCTRL SQT
-  &hml LALT  BSLH     &kp Z             &kp X          &kp C             &kp D             &kp V                     &kp K            &kp H             &kp COMMA       &kp DOT         &kp FSLH       &hmr RALT MINUS
+  &bhm LWIN RBKT      &kp Q             &kp W          &kp F             &kp P             &kp B                     &kp J            &kp L             &kp U           &kp Y           &kp SEMI       &bhm RWIN LBKT 
+  &bhm LCTRL GRAVE    &bhm LGUI A        &bhm LALT R     &bhm LCTRL S       &bhm LSHFT T       &kp G                     &kp M            &bhm RSHFT N       &bhm RCTRL E     &bhm RALT I      &bhm LGUI O     &bhm RCTRL SQT
+  &bhm LALT  BSLH     &kp Z             &kp X          &kp C             &kp D             &kp V                     &kp K            &kp H             &kp COMMA       &kp DOT         &kp FSLH       &bhm RALT MINUS
                                                       &lt MEDIA ESC     &lt NAV TAB       &lt MOUSE SPACE           &lt SYM BSPC     &lt NUM RET       &lt FUN DEL
                         >;
                 };
                 num_layer {    //NUM
                 bindings = <
   &kp LBKT           &kp LBKT          &kp N7          &kp N8            &kp N9            &kp RBKT                  &none            &none              &none         &none            &none       &none
-  &kp SQT            &kp SQT           &kp N4          &kp N5            &kp N6            &kp EQUAL                 &caps_word       &kp LSHFT          &kp LCTRL     &kp LALT         &kp LGUI      &hmr RALT F2
+  &kp SQT            &kp SQT           &kp N4          &kp N5            &kp N6            &kp EQUAL                 &caps_word       &kp LSHFT          &kp LCTRL     &kp LALT         &kp LGUI      &bhm RALT F2
   &kp GRAVE          &kp GRAVE         &kp N1          &kp N2            &kp N3            &kp BSLH                  &none            &none              &none         &none            &none       &none
                                                        &kp DOT           &kp N0            &kp MINUS                 &trans           &trans             &trans
                         >;
@@ -130,7 +103,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
                 nav_layer {    //NAV
                 bindings = <
   &kp K_UNDO        &kp K_UNDO         &kp K_REDO      &kp UP            &kp K_COPY        &kp K_PASTE                &none            &to VAL          &none           &none          &to SYS        &none
-  &kp K_UNDO        &kp K_CUT          &kp LEFT        &kp DOWN          &kp RIGHT         &caps_word                 &caps_word       &kp LSHFT         &kp LCTRL     &kp LALT         &kp LGUI      &hmr RALT F2
+  &kp K_UNDO        &kp K_CUT          &kp LEFT        &kp DOWN          &kp RIGHT         &caps_word                 &caps_word       &kp LSHFT         &kp LCTRL     &kp LALT         &kp LGUI      &bhm RALT F2
   &kp K_UNDO        &kp PG_DN          &kp PG_UP       &kp INS           &kp HOME          &kp END                    &none            &none            &none           &none            &none        &none
                                                        &kp DOT           &kp N0            &kp MINUS                  &trans           &trans           &trans
                         >; 
@@ -138,7 +111,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
                 sym_layer {   //SYM
                 bindings = <
   &kp K_UNDO        &kp LBRC           &kp AMPS        &kp ASTRK         &kp LPAR          &kp RBRC                   &none            &none              &none         &none            &none       &none
-  &kp K_UNDO        &kp DOUBLE_QUOTES  &kp DLLR        &kp PRCNT         &kp CARET         &kp PLUS                   &caps_word       &kp LSHFT          &kp LCTRL     &kp LALT         &kp LGUI      &hmr RALT F2
+  &kp K_UNDO        &kp DOUBLE_QUOTES  &kp DLLR        &kp PRCNT         &kp CARET         &kp PLUS                   &caps_word       &kp LSHFT          &kp LCTRL     &kp LALT         &kp LGUI      &bhm RALT F2
   &kp K_UNDO        &kp TILDE          &kp EXCL        &kp AT            &kp HASH          &kp PIPE                   &none            &none              &none         &none            &none       &none
                                                        &kp LPAR          &kp RPAR          &kp UNDER                  &trans           &trans             &trans
                         >;
@@ -146,7 +119,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
                 mouse_layer {   //MOUSE
                 bindings = <
   &none             &none              &mkp LCLK        U_MS_U           &mkp RCLK         U_WH_U                     &none            &none              &none         &none            &none       &none
-  &none             &none              U_MS_L           U_MS_D           U_MS_R            U_WH_D                     &caps_word       &kp LSHFT          &kp LCTRL     &kp LALT         &kp LGUI      &hmr RALT F2
+  &none             &none              U_MS_L           U_MS_D           U_MS_R            U_WH_D                     &caps_word       &kp LSHFT          &kp LCTRL     &kp LALT         &kp LGUI      &bhm RALT F2
   &none             &none              U_WH_L           &kp AT           U_WH_R            &kp PIPE                   &none            &none              &none         &none            &none       &none
                                                         &trans           &trans             &trans                    &trans           &trans             &trans
                         >;
@@ -154,7 +127,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
                 fun_layer {  //FUN
                 bindings = <
    &bootloader      &kp F12            &kp F7          &kp F8            &kp F9            &kp PSCRN                   &none            &none              &none         &none            &none       &none
-   &bt BT_CLR       &kp F11            &kp F4          &kp F5            &kp F6            &kp SLCK                    &caps_word       &kp LSHFT          &kp LCTRL     &kp LALT         &kp LGUI      &hmr RALT F2
+   &bt BT_CLR       &kp F11            &kp F4          &kp F5            &kp F6            &kp SLCK                    &caps_word       &kp LSHFT          &kp LCTRL     &kp LALT         &kp LGUI      &bhm RALT F2
    &trans           &kp F10            &kp F1          &kp F2            &kp F3            &kp PAUSE_BREAK             &none            &none              &none         &none            &none       &none
                                                        &kp K_APP         &kp TAB           &kp SPACE                   &trans       &none        &trans
                         >;
@@ -162,7 +135,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
                 media_layer {  //MEDIA
                 bindings = <
   &kp K_UNDO        &kp LBRC           &kp AMPS        &kp C_VOL_UP      &kp LPAR          &kp C_MUTE                  &none            &none              &none         &none            &none       &none
-  &kp K_UNDO        &kp DOUBLE_QUOTES  &kp C_PREV      &kp C_VOL_DN      &kp C_NEXT         &kp C_PP                    &caps_word       &kp LSHFT          &kp LCTRL      &kp LALT         &kp LGUI      &hmr RALT F2
+  &kp K_UNDO        &kp DOUBLE_QUOTES  &kp C_PREV      &kp C_VOL_DN      &kp C_NEXT         &kp C_PP                    &caps_word       &kp LSHFT          &kp LCTRL      &kp LALT         &kp LGUI      &bhm RALT F2
   &kp K_UNDO        &kp TILDE          &kp EXCL        &kp AT            &kp HASH          &kp C_STOP                    &none            &none              &none         &none            &none       &none
                                                        &trans           &trans             &trans                  &trans           &trans             &trans
                         >;
@@ -171,7 +144,7 @@ MAKE_HRM(hmr, &kp, &kp, KEYS_L THUMBS)  // right-hand HRMs
                 bindings = <
   &kp K_UNDO        &kp TAB            &kp Q           &kp W             &kp E             &kp R                      &none            &none              &none         &none            &none       &none
   &kp K_UNDO        &kp LSHFT          &kp A           &kp S             &kp D             &kp F                      &none            &none              &none         &none            &none       &none
-  &kp K_UNDO        &kp LCTRL          &kp Z           &kp X             &kp C             &hml N4 B                   &none            &none              &none         &none            &none       &none
+  &kp K_UNDO        &kp LCTRL          &kp Z           &kp X             &kp C             &bhm N4 B                   &none            &none              &none         &none            &none       &none
                                                        &kp ESC           &lt VALTWO V      &kp SPACE                  &trans           &trans             &trans
                         >;
                 };
