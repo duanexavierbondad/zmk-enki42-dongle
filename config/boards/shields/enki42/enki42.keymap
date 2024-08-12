@@ -29,11 +29,7 @@
 // Desktop and tab navigation shortcuts
 #define D_LT   LC(LG(LEFT))
 #define D_RT   LC(LG(RIGHT))
-#defime COPY   &kp LC(C)
-#defime PASTE  &kp LC(V)
-#defime CUT    &kp LC(X)
-#defime UNDO   &kp LC(Z)
-#defime REDO   &kp LC(Y)
+
 #define TAB_RT LC(TAB)
 #define TAB_LT LC(LS(TAB))
 
