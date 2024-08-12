@@ -34,7 +34,7 @@
 #define TAB_LT LC(LS(TAB))
 
 // Extra key bindings
-#define SWP_POS 15
+#define SWP_POS 18
 
 &lt { quick_tap_ms = <250>; };
 &lt { quick_tap_ms = <250>; };
@@ -121,7 +121,7 @@
                 nav_layer {    //NAV
                 bindings = <
   &kp K_UNDO        &kp K_UNDO         &kp K_REDO      &kp UP            &kp K_COPY        &kp K_PASTE                &kp TAB_LT       &kp TAB_RT         &kp LC(F4)      &to VAL         &to SYS         &none
-  &kp K_UNDO        &kp K_CUT          &kp LEFT        &kp DOWN          &kp RIGHT         &caps_word                 &none           &none           &none           &none           &none           &none
+  &kp K_UNDO        &kp K_CUT          &kp LEFT        &kp DOWN          &kp RIGHT         &caps_word                 &kp LS(TAB)      &swapper           &none           &none           &none           &none
   &kp K_UNDO        &kp D_LT           &kp D_RT        &kp INS           &kp LA(TAB)       &kp LA(LS(TAB))            &kp LA(F4)       &none              &none           &none           &none           &none
                                                        &none             &none             &none                      &trans           &trans             &kp RALT 
                         >;  
