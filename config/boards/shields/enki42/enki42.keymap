@@ -197,7 +197,7 @@
                 sys_layer {    
                 label = "SYS"; //SYS
                 bindings = <
-  &none             &to TAP             _BT_SEL_KEYS_     &bt BT_CLR       &none              &to DEF                  &to DEF          &out OUT_USB       &out OUT_BLE    _BT_SEL_KEYS_   &to TAP         &none
+  &none             &none               _BT_SEL_KEYS_     &bt BT_CLR       &to TAP            &to DEF                  &to DEF          &to TAP            &none           _BT_SEL_KEYS_   &none          &none
   &none             &none               &none             &none            &none              &bootloader              &bootloader      &none              &none           &none           &bt BT_CLR      &none
   &none             &ext_power EP_ON    &none             &none            &none              &sys_reset               &sys_reset       &none              &none           &none           &none           &none
                                                           &trans           &trans             &trans                   &trans           &trans             &trans
