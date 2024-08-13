@@ -102,7 +102,8 @@
         keymap {
                 compatible = "zmk,keymap";
 
-                default_layer {  //DEFAULT
+                default_layer {  
+                label = "BASE"; //DEFAULT
                 bindings = <
   &bhm LWIN RBKT      &kp Q            &kp W           &kp F             &kp P             &kp B                      &kp J            &kp L              &kp U           &kp Y           &kp SEMI        &bhm RWIN LBKT 
   &bhm LCTRL GRAVE    &bhm LGUI A      &bhm LALT R     &bhm LCTRL S      &bhm LSHFT T      &kp G                      &kp M            &bhm RSHFT N       &bhm RCTRL E    &bhm RALT I     &bhm LGUI O     &bhm RCTRL SQT
@@ -110,7 +111,9 @@
                                                        &lt MEDIA ESC     &lt NAV TAB       &lt MOUSE SPACE            &lt SYM BSPC     &lt NUM RET        &lt FUN DEL
                         >;
                 };
-                num_layer {    //NUM
+                num_layer {    
+                label = "NUM"; //NUM
+                
                 bindings = <
   &kp ASTRK           &kp LBKT         &kp N7          &kp N8            &kp N9            &kp PLUS                   &none            &none              &none           &none           &none           &none
   &kp PRCNT           &kp SQT          &kp N4          &kp N5            &kp N6            &kp EQUAL                  &none            &none              &none           &none           &none           &none
@@ -118,7 +121,8 @@
                                                        &kp DOT           &kp N0            &kp MINUS                  &trans           &trans             &trans
                         >;
                 };
-                nav_layer {    //NAV
+                nav_layer {    
+                label = "NAV"; //NAV
                 bindings = <
   &kp K_UNDO        &kp LC(Z)          &kp LC(Y)       &kp UP            &kp LC(C)         &kp LC(V)                  &kp TAB_LT       &kp TAB_RT         &kp LC(F4)      &to VAL         &to SYS         &none
   &kp K_UNDO        &kp LC(X)          &kp LEFT        &kp DOWN          &kp RIGHT         &caps_word                 &kp LA(TAB)      &kp LA(LS(TAB))    &none           &none           &none           &none
@@ -126,7 +130,8 @@
                                                        &none             &none             &none                      &kp D_LT         &kp D_RT         &kp RALT 
                         >;  
                 };
-                sym_layer {   //SYM
+                sym_layer {   
+                label = "SYM"; //SYM
                 bindings = <
   &kp K_UNDO        &kp LBRC           &kp AMPS        &kp CARET         &kp LBRC          &kp RBRC                   &none            &none              &none           &none           &none           &none
   &kp K_UNDO        &kp PIPE           &kp DLLR        &kp HASH          &kp LBKT          &kp RBKT                   &none            &none              &none           &none           &none           &none
@@ -134,7 +139,8 @@
                                                        &kp LPAR          &kp RPAR          &kp UNDER                  &trans           &trans             &trans 
                         >;
                 };
-                mouse_layer {   //MOUSE
+                mouse_layer {   
+                label = "MSE"; //MOUSE
                 bindings = <
   &none             &none              &mkp LCLK        &mmv MOVE_UP     &mkp RCLK         &msc SCRL_UP               &none            &none              &none           &none           &none           &none
   &none             &none              &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT   &msc SCRL_DOWN             &none            &none              &none           &none           &none           &none
@@ -142,7 +148,8 @@
                                                         &trans           &trans            &trans                     &trans           &trans             &trans
                         >;
                 };
-                fun_layer {  //FUN
+                fun_layer {  
+                label = "FUN"; //FUN
                 bindings = <
    &bootloader      &kp F12            &kp F7          &kp F8            &kp F9            &kp PSCRN                   &none            &none             &none           &none           &none           &none
    &bt BT_CLR       &kp F11            &kp F4          &kp F5            &kp F6            &kp SLCK                    &none            &none             &none           &none           &none           &none
@@ -150,7 +157,8 @@
                                                        &kp K_APP         &kp TAB           &kp SPACE                   &trans           &none             &trans
                         >;
                 };
-                media_layer {  //MEDIA
+                media_layer {  
+                label = "MED"; //MEDIA
                 bindings = <
   &kp K_UNDO        &kp LBRC           &kp AMPS        &kp C_VOL_UP      &kp LPAR          &kp C_MUTE                  &none            &none             &none           &none           &none           &none
   &kp K_UNDO        &kp DOUBLE_QUOTES  &kp C_PREV      &kp C_VOL_DN      &kp C_NEXT         &kp C_PP                   &none            &none             &none           &none           &none           &none
@@ -158,7 +166,8 @@
                                                        &trans            &trans             &trans                      &trans           &trans           &trans
                         >;
                 };
-                val_layer {  //VAL
+                val_layer {  
+                label = "VAL"; //VAL
                 bindings = <
   &kp K_UNDO        &kp TAB            &kp Q           &kp W             &kp E             &kp R                      &none            &none              &none           &none           &none           &none
   &kp K_UNDO        &kp LSHFT          &kp A           &kp S             &kp D             &kp F                      &none            &none              &none           &none           &none           &none
@@ -166,7 +175,8 @@
                                                        &kp ESC           &lt VALTWO V      &kp SPACE                  &trans           &trans             &trans
                         >;
                 };
-                valtwo_layer {  //VALTWO
+                valtwo_layer {  
+                label = "VAL2"; //VALTWO
                 bindings = <
   &none             &kp B              &none            &none             &kp N4            &kp CAPSLOCK              &none            &none              &none           &none           &none           &none
   &none             &kp ESC            &kp N1           &kp N2            &kp N3            &kp G                     &none            &none              &none           &none           &none           &none
@@ -174,7 +184,8 @@
                                                         &to DEF             &kp LCTRL         &kp SPACE               &trans           &trans             &trans
                         >;
                 };
-                sys_layer {    //SYS
+                sys_layer {    
+                label = "SYS"; //SYS
                 bindings = <
   &none             &none              _BT_SEL_KEYS_     &none            &none              &to DEF                  &to DEF          &none              &none           &none           &none           &none
   &none             &bt BT_CLR         &none             &none            &none              &bootloader              &bootloader      &none              &none           &none           &bt BT_CLR      &none
