@@ -1,7 +1,7 @@
 manifest:
   remotes:
     - name: caksoylar
-      url-base: https://github.com/caksoylar
+      url-base: https://github.com/duanexavierbondad
   projects:
     - name: zmk
       remote: caksoylar
