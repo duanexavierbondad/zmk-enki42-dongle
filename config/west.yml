@@ -7,5 +7,8 @@ manifest:
       remote: caksoylar
       revision: caksoylar/experimental
       import: app/west.yml
+    - name: zmk-tri-state
+      remote: caksoylar
+      revision: main
   self:
     path: config
