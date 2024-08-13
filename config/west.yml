@@ -1,10 +1,10 @@
 manifest:
   remotes:
-    - name: duanexavierbondad
-      url-base: https://github.com/duanexavierbondad
+    - name: caksoylar
+      url-base: https://github.com/caksoylar
   projects:
     - name: zmk
-      remote: duanexavierbondad
+      remote: caksoylar
       revision: caksoylar/experimental
       import: app/west.yml
   self:
