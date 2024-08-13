@@ -172,9 +172,9 @@
                 val_layer {  
                 label = "VALO"; //VAL
                 bindings = <
-  &kp K_UNDO        &kp TAB            &kp Q           &kp W             &kp E             &kp R                      &none            &none              &none           &none           &none           &none
-  &kp K_UNDO        &kp LSHFT          &kp A           &kp S             &kp D             &kp F                      &none            &none              &none           &none           &none           &none
-  &kp K_UNDO        &kp LCTRL          &kp Z           &kp X             &kp C             &bhm N4 B                  &none            &none              &none           &none           &none           &none
+  &kp TAB            &kp Q           &kp W             &kp E             &kp R                      &none            &none              &none           &none           &none           
+  &kp LSHFT          &kp A           &kp S             &kp D             &kp F                      &none            &none              &none           &none           &none           
+  &kp LCTRL          &kp Z           &kp X             &kp C             &bhm N4 B                  &none            &none              &none           &none           &none          
                                                        &kp ESC           &lt VALTWO V      &kp SPACE                  &trans           &trans             &trans
                         >;
                 };
