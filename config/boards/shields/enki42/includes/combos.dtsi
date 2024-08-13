@@ -26,13 +26,12 @@
         key-positions = <KEYPOS>; \
         layers = <LAYERS>; \
         require-prior-idle-ms = <QUICKTAP>; \
-        __VA_ARGS__ \
     };
 
 / {
     combos {
         compatible = "zmk,combos";
 
-COMBO(j,      &kp J,       4 5,     DEF,          80,  50)
+COMBO(j, &kp J, 4 5, DEF, 80, 50)
     };
 };
