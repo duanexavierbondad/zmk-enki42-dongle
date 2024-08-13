@@ -68,7 +68,7 @@
             then-layer = <9>;
         };
     };
-    conditional_layers {
+    conditional_layer {
         compatible = "zmk,conditional-layers";
         tri_layer {
             if-layers = <4 3>;
