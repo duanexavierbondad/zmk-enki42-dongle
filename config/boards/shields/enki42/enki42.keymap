@@ -115,7 +115,7 @@
                 label = "NUM"; //NUM
                 
                 bindings = <
-  &kp ASTRK           &kp LBKT         &kp N7          &kp N8            &kp N9            &kp PLUS                   &none            &none              &none           &none           &none           &none
+  &kp ASTRK           &kp ASTRK        &kp N7          &kp N8            &kp N9            &kp PLUS                   &none            &none              &none           &none           &none           &none
   &kp PRCNT           &kp SQT          &kp N4          &kp N5            &kp N6            &kp EQUAL                  &none            &none              &none           &none           &none           &none
   &kp GRAVE          &kp GRAVE         &kp N1          &kp N2            &kp N3            &kp BSLH                   &none            &none              &none           &none           &none           &none
                                                        &kp DOT           &kp N0            &kp MINUS                  &trans           &trans             &trans
@@ -133,7 +133,7 @@
                 sym_layer {   
                 label = "SYM"; //SYM
                 bindings = <
-  &kp K_UNDO        &kp LBRC           &kp AMPS        &kp CARET         &kp LBRC          &kp RBRC                   &none            &none              &none           &none           &none           &none
+  &kp K_UNDO        &kp PRCNT          &kp AMPS        &kp CARET         &kp LBRC          &kp RBRC                   &none            &none              &none           &none           &none           &none
   &kp K_UNDO        &kp PIPE           &kp DLLR        &kp HASH          &kp LBKT          &kp RBKT                   &none            &none              &none           &none           &none           &none
   &kp K_UNDO        &kp TILDE          &kp EXCL        &kp AT            &kp SQT           &kp DOUBLE_QUOTES          &none            &none              &none           &none           &none           &none
                                                        &kp LPAR          &kp RPAR          &kp UNDER                  &trans           &trans             &trans 
