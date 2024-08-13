@@ -32,11 +32,17 @@
 / {
     combos {
         compatible = "zmk,combos";
-        COMBO(j,      &kp J,       LT2 LT1,     DEF,          80,  50)
+        /*COMBO(j,      &kp J,       LT2 LT1,     DEF,          80,  50)*/
         combo_lbrc {
             timeout-ms = <50>;
             key-positions = <1 2>;
-            bindings = <&kp LBRC>;
+            bindings = <&kp LBKT>;
+            layers = <DEF>;
+        };
+        combo_rbrc {
+            timeout-ms = <50>;
+            key-positions = <2 3>;
+            bindings = <&kp RBKT>;
             layers = <DEF>;
         };
     };
