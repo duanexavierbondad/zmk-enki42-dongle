@@ -80,6 +80,9 @@
 
         //VALTWO
         COMBO(DEF,            &to DEF,       LT3 LT2 LT1,     VALTWO,       80,  50)  //    TAP LAYER CHANGE
+
+        //TAP
+        COMBO(toDEF,          &to DEF,       LH2 RH2,         TAP,          80,  50)  //    TAP LAYER CHANGE
         
         //SYS
         COMBO(BT_CLR,      &bt BT_CLR,       LT2 LT1,         SYS,          80,  50)  //    BT CLEAR PROFILES
