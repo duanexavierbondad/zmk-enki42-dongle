@@ -28,8 +28,7 @@
 #define TAP 9
 #define SYS 10
 
-#include "keypos_def/keypos_36keys.h"
-#include "includes/combos.dtsi"
+
 
 // Desktop and tab navigation shortcuts
 #define D_LT   LC(LG(LEFT))
@@ -103,6 +102,10 @@
         };
     };
 };
+
+#include "keypos_def/keypos_36keys.h"
+#include "includes/combos.dtsi"
+
 / {
         keymap {
                 compatible = "zmk,keymap";
