@@ -85,7 +85,7 @@
         
         //SYS
         COMBO(BT_CLR,      &bt BT_CLR,       LT2 LT1,         SYS,          80,  50)  //    BT CLEAR PROFILES
-        COMBO(BT_CLR,      &bt BT_CLR,       RT1 RT2,         SYS,          80,  50)  //    BT CLEAR PROFILES
+        COMBO(BT_CLR1,     &bt BT_CLR,       RT1 RT2,         SYS,          80,  50)  //    BT CLEAR PROFILES
         COMBO(VAL,            &to VAL,       LM1 RM1,         SYS,          80,  50)  //    VAL LAYER CHANGE
         COMBO(TAP,            &to TAP,       LM0 RM0,         SYS,          80,  50)  //    TAP LAYER CHANGE
         
