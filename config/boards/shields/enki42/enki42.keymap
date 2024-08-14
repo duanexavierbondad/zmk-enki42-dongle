@@ -22,7 +22,7 @@
 #define NUM 1
 #define NAV 2
 #define SYM 3
-#define MOUSE 4
+#define SCREEN 4
 #define FUN 5
 #define MEDIA 6
 #define VAL 7
@@ -150,12 +150,12 @@
                                                     &kp LPAR          &kp RPAR          &kp UNDER                  &trans           &trans             &trans 
                         >;
                 };
-                mouse_layer {   
-                label = "MOUSE"; //MOUSES
+                screen_layer {   
+                label = "SCREEN"; //SCREEN
                 bindings = <
-                &none                   &none       &none             &none             &none                      &none            &none              &none           &none           &none           
-                &none                   &none       &none             &none             &none                      &none            &none              &none           &none           &none           
-                &none                   &none       &none             &none             &none                      &none            &none              &none           &none           &none           
+                &none                   &none       &none             &kp TAB_LT         &kp TAB_RT                &none            &none              &none           &none           &none          
+                &none                   &none       &none             &kp LS(TAB)        &swapper                  &none            &none              &none           &none           &none         
+                &none                   &none       &none             &kp D_LT           &kp D_RT                  &none            &none              &none           &none           &none          
                                                     &trans            &trans            &trans                     &trans           &trans             &trans
                         >;
                 };
@@ -171,8 +171,8 @@
                 media_layer {  
                 label = "MED"; //MEDIA
                 bindings = <
-                &none                 &none         &kp C_VOL_UP      &none             &kp C_MUTE                 &none            &none              &none           &none           &none           
-                &none                 &kp C_PREV    &kp C_VOL_DN      &kp C_NEXT        &kp C_PP                   &none            &none              &none           &none           &none           
+                &none                 &kp LS(TAB)    &kp C_VOL_UP     &swapper          &kp C_MUTE                 &none            &none              &none           &none           &none           
+                &kp LA(F4)            &kp C_PREV    &kp C_VOL_DN      &kp C_NEXT        &kp C_PP                   &none            &none              &none           &none           &none           
                 &none                 &none         &none             &none             &kp C_STOP                 &none            &none              &none           &none           &none           
                                                     &trans            &trans            &trans                     &trans           &trans             &trans
                         >;
