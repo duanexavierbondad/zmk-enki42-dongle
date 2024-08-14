@@ -65,12 +65,12 @@
 
 
         //MOUSE
-/*        COMBO(TAB_PREV,    &kp TAB_LT,       LT3 LT2,         MSE,          80,  50)  //    CTRL + SHIFT  + TAB
-        COMBO(TAB_NEXT,    &kp TAB_RT,       LT2 LT1,         MSE,          80,  50)  //    CTRL + TAB
-        COMBO(WIN_PREV,   &kp LS(TAB),       LM3 LM2,         MSE,          80,  50)  //    ALT  + SHIFT  + TAB
-        COMBO(WIN_NEXT,      &swapper,       LM2 LM1,         MSE,          80,  50)  //    ALT  + TAB
-        COMBO(DESK_PREV,     &kp D_LT,       LT1 LT0,         MSE,          80,  50)  //    CTRL + WIN    + LEFT
-        COMBO(DESK_NEXT,     &kp D_RT,       LM1 LM0,         MSE,          80,  50)  //    CTRL + WIN    + RIGHT
+        COMBO(TAB_PREV,    &kp TAB_LT,       LT3 LT2,         MOUSE,        80,  50)  //    CTRL + SHIFT  + TAB
+        COMBO(TAB_NEXT,    &kp TAB_RT,       LT2 LT1,         MOUSE,        80,  50)  //    CTRL + TAB
+        COMBO(WIN_PREV,   &kp LS(TAB),       LM3 LM2,         MOUSE,        80,  50)  //    ALT  + SHIFT  + TAB
+        COMBO(WIN_NEXT,      &swapper,       LM2 LM1,         MOUSE,        80,  50)  //    ALT  + TAB
+        COMBO(DESK_PREV,     &kp D_LT,       LT1 LT0,         MOUSE,        80,  50)  //    CTRL + WIN    + LEFT
+        COMBO(DESK_NEXT,     &kp D_RT,       LM1 LM0,         MOUSE,        80,  50)  //    CTRL + WIN    + RIGHT
 
         COMBO(TAB_CLOSE,   &kp LC(F4),       RT1 RT2 RT3,     MSE,          80,  50)  //    CTRL + F4
         COMBO(WIN_CLOSE,   &kp LA(F4),       RM1 RM2 RM3,     MSE,          80,  50)  //    ALT  + F4
@@ -89,7 +89,7 @@
         COMBO(VAL,            &to VAL,       LM1 RM1,         SYS,          80,  50)  //    VAL LAYER CHANGE
         COMBO(TAP,            &to TAP,       LM0 RM0,         SYS,          80,  50)  //    TAP LAYER CHANGE
         
-        combo_rbrc {
+        /*combo_rbrc {
             timeout-ms = <50>;
             key-positions = <2 3>;
             bindings = <&kp RBKT>;
