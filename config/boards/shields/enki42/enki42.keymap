@@ -33,6 +33,7 @@
 // Desktop and tab navigation shortcuts
 #define D_LT   LC(LG(LEFT))
 #define D_RT   LC(LG(RIGHT))
+#define D_CL   LC(LG(F4))
 
 #define TAB_RT LC(TAB)
 #define TAB_LT LC(LS(TAB))
