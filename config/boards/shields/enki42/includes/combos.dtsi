@@ -72,9 +72,9 @@
         COMBO(DESK_PREV,     &kp D_LT,       LT1 LT0,         MOUSE,        80,  50)  //    CTRL + WIN    + LEFT
         COMBO(DESK_NEXT,     &kp D_RT,       LM1 LM0,         MOUSE,        80,  50)  //    CTRL + WIN    + RIGHT
 
-        COMBO(TAB_CLOSE,   &kp LC(F4),       RT1 RT2 RT3,     MSE,          80,  50)  //    CTRL + F4
-        COMBO(WIN_CLOSE,   &kp LA(F4),       RM1 RM2 RM3,     MSE,          80,  50)  //    ALT  + F4
-        COMBO(DESK_CLOSE,    &kp D_CL,       RB1 RB2 RB3,     MSE,          80,  50)  //    WIN  + CTRL   + TAB
+        COMBO(TAB_CLOSE,   &kp LC(F4),       RT1 RT2 RT3,     MOUSE,          80,  50)  //    CTRL + F4
+        COMBO(WIN_CLOSE,   &kp LA(F4),       RM1 RM2 RM3,     MOUSE,          80,  50)  //    ALT  + F4
+        COMBO(DESK_CLOSE,    &kp D_CL,       RB1 RB2 RB3,     MOUSE,          80,  50)  //    WIN  + CTRL   + TAB
 
 
         //MEDIA
