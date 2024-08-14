@@ -106,7 +106,7 @@
     };
 };
 
-#include "keypos_def/keypos_36keys.h"
+#include "keypos_def/keypos_36key.h"
 #include "includes/combos.dtsi"
 
 / {
