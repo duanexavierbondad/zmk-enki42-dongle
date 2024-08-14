@@ -1,3 +1,3 @@
 #define MOUSE_KEYS
-#include "keypos_def/keypos_36keys.h"
+#include "keypos_def/keypos_36key.h"
 #include "includes/3x5.dtsi"
