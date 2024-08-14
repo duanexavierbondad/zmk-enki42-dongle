@@ -119,7 +119,7 @@
                 &kp Q                 &kp W         &kp F             &kp P             &kp B                      &kp J            &kp L              &kp U           &kp Y           &kp SEMI        
                 &bhm LGUI A           &bhm LALT R   &bhm LCTRL S      &bhm LSHFT T      &kp G                      &kp M            &bhm RSHFT N       &bhm RCTRL E    &bhm RALT I     &bhm RGUI O     
                 &kp Z                 &kp X         &kp C             &kp D             &kp V                      &kp K            &kp H              &kp COMMA       &kp DOT         &kp FSLH        
-                                                    &lt MEDIA ESC     &lt NAV TAB       &lt MOUSE SPACE            &lt SYM BSPC     &lt NUM RET        &lt FUN DEL
+                                                    &lt MEDIA ESC     &lt NAV TAB       &lt SCREEN SPACE            &lt SYM BSPC     &lt NUM RET        &lt FUN DEL
                         >;
                 };
                 num_layer {    
