@@ -58,25 +58,27 @@
         //NAV
         COMBO(UNDO,         &kp LC(Z),       LT3 LT2,         NAV,          80,  50)  //    UNDO
         COMBO(REDO,         &kp LC(Y),       LT2 LT1,         NAV,          80,  50)  //    REDO
-        COMBO(BSPC,          &kp BSPC,       LT3 LT2 LT1,     NAV,          80,  50)  //    BACKSPACE
-        COMBO(SPACE,        &kp SPACE,       LM3 LM2 LM1,     NAV,          80,  50)  //    SPACE
+        COMBO(BSPC,          &kp BSPC,       LM3 LM2,         NAV,          80,  50)  //    BACKSPACE
+        COMBO(SPACE,        &kp SPACE,       LM2 LM1,         NAV,          80,  50)  //    SPACE
+        COMBO(WIN_PREV1,   &kp LS(TAB),      LB3 LB2,         NAV,          80,  50)  //    ALT  + SHIFT  + TAB
+        COMBO(WIN_NEXT1,      &swapper,      LB2 LB1,         NAV,          80,  50)  //    ALT  + TAB
 
 
         //MOUSE
-        COMBO(TAB_PREV,    &kp TAB_LT,       LT3 LT2,         MOUSE,        80,  50)  //    CTRL + SHIFT  + TAB
-        COMBO(TAB_NEXT,    &kp TAB_RT,       LT2 LT1,         MOUSE,        80,  50)  //    CTRL + TAB
-        COMBO(WIN_PREV,   &kp LS(TAB),       LM3 LM2,         MOUSE,        80,  50)  //    ALT  + SHIFT  + TAB
-        COMBO(WIN_NEXT,      &swapper,       LM2 LM1,         MOUSE,        80,  50)  //    ALT  + TAB
-        COMBO(DESK_PREV,     &kp D_LT,       LT1 LT0,         MOUSE,        80,  50)  //    CTRL + WIN    + LEFT
-        COMBO(DESK_NEXT,     &kp D_RT,       LM1 LM0,         MOUSE,        80,  50)  //    CTRL + WIN    + RIGHT
+        COMBO(TAB_PREV,    &kp TAB_LT,       RT1 RT2,         MOUSE,        80,  50)  //    CTRL + SHIFT  + TAB
+        COMBO(TAB_NEXT,    &kp TAB_RT,       RT2 RT3,         MOUSE,        80,  50)  //    CTRL + TAB
+        COMBO(WIN_PREV,   &kp LS(TAB),       RM1 RM2,         MOUSE,        80,  50)  //    ALT  + SHIFT  + TAB
+        COMBO(WIN_NEXT,      &swapper,       RM2 RM3,         MOUSE,        80,  50)  //    ALT  + TAB
+        COMBO(DESK_PREV,     &kp D_LT,       RB1 RB2,         MOUSE,        80,  50)  //    CTRL + WIN    + LEFT
+        COMBO(DESK_NEXT,     &kp D_RT,       RB2 RB3,         MOUSE,        80,  50)  //    CTRL + WIN    + RIGHT
 
-        COMBO(TAB_CLOSE,   &kp LC(F4),       RT1 RT2 RT3,     MOUSE,          80,  50)  //    CTRL + F4
-        COMBO(WIN_CLOSE,   &kp LA(F4),       RM1 RM2 RM3,     MOUSE,          80,  50)  //    ALT  + F4
-        COMBO(DESK_CLOSE,    &kp D_CL,       RB1 RB2 RB3,     MOUSE,          80,  50)  //    WIN  + CTRL   + TAB
+        COMBO(TAB_CLOSE,   &kp LC(F4),       RT1 RT2 RT3,     MOUSE,        80,  50)  //    CTRL + F4
+        COMBO(WIN_CLOSE,   &kp LA(F4),       RM1 RM2 RM3,     MOUSE,        80,  50)  //    ALT  + F4
+        COMBO(DESK_CLOSE,    &kp D_CL,       RB1 RB2 RB3,     MOUSE,        80,  50)  //    WIN  + CTRL   + TAB
 
 
         //MEDIA
-        COMBO(PLAYPAUSE,     &kp C_PP,       LM3 LM2 LM1,     MEDIA,        80,  50)  //    PLAY PAUSE
+        COMBO(PLAYPAUSE,     &kp C_PP,       LM2 LM1,         MEDIA,        80,  50)  //    PLAY PAUSE
 
         //VALTWO
         COMBO(DEF,            &to DEF,       LT3 LT2 LT1,     VALTWO,       80,  50)  //    TAP LAYER CHANGE
