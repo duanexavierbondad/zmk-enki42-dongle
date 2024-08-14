@@ -106,7 +106,7 @@
     };
 };
 
-#include "includes/combos.dtsi"
+#include "combos.dtsi"
 
 / {
         keymap {
