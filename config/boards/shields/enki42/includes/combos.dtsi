@@ -60,8 +60,6 @@
         COMBO(REDO,         &kp LC(Y),       LT2 LT1,         NAV,          80,  50)  //    REDO
         COMBO(BSPC,          &kp BSPC,       LT3 LT2 LT1,     NAV,          80,  50)  //    BACKSPACE
         COMBO(SPACE,        &kp SPACE,       LM3 LM2 LM1,     NAV,          80,  50)  //    SPACE
-        COMBO(LCLK,         &mkp LCLK,       RM1 RM2,         NAV,          80,  50)  //    UNDO
-        COMBO(RCLK,         &mkp RCLK,       RM2 RM3,         NAV,          80,  50)  //    REDO
 
 
         //MOUSE
