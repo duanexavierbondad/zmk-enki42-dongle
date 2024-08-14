@@ -65,8 +65,8 @@
 
 
         //MOUSE
-        COMBO(TAB_PREV,    &kp TAB_LT,       LT3 LT2,         MSE,          80,  50)  //    CTRL + SHIFT  + TAB
-        COMBO(TAB_NEXT,    &kp TAB_RT,       LT2 LT1,         MSE,          80,  50)  //    CTRL + TAB
+//        COMBO(TAB_PREV,    &kp TAB_LT,       LT3 LT2,         MSE,          80,  50)  //    CTRL + SHIFT  + TAB
+//        COMBO(TAB_NEXT,    &kp TAB_RT,       LT2 LT1,         MSE,          80,  50)  //    CTRL + TAB
         COMBO(WIN_PREV,   &kp LS(TAB),       LM3 LM2,         MSE,          80,  50)  //    ALT  + SHIFT  + TAB
         COMBO(WIN_NEXT,      &swapper,       LM2 LM1,         MSE,          80,  50)  //    ALT  + TAB
         COMBO(DESK_PREV,     &kp D_LT,       LT1 LT0,         MSE,          80,  50)  //    CTRL + WIN    + LEFT
